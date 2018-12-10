@@ -43,4 +43,14 @@ print('a:\n', a)
 print('b:\n', b)
 
 conc = np.concatenate((a, b), axis=0)
-print('conc:\n', conc)
+print('conc by columns:\n', conc)
+
+conc = np.concatenate((a, b), axis=1)
+print('conc by rows:\n', conc)
+
+print('-----------------------------------------------------------')
+
+print('a:\n', a)
+print('b:\n', b)
+print('c_[a, b]:\n', np.c_[a, b])
+print('r_[a, b]:\n', np.r_[a, b])
