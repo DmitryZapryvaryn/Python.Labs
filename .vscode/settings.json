@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\Zapryvaryn_D\\AppData\\Local\\Continuum\\anaconda3\\python.exe",
+    "python.pythonPath": "E:\\Anaconda\\python.exe",
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": false,
     "python.linting.pep8Enabled": true
