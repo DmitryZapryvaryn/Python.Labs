@@ -6,11 +6,11 @@ axes.set_xlim(0, 4)
 axes.set_ylim(0, 3)
 
 major_ticks = np.arange(0, 101, 20)
-minor_ticks = np.arange(0, 101, 5)
+minor_ticks = np.arange(0, 101, 2)
 
 axes.set_xticklabels([])
 axes.set_yticklabels([])
-
+axes.tick_params(axis='both', direction='in', which='both')
 axes.set_xticks(major_ticks)
 axes.set_xticks(minor_ticks, minor=True)
 axes.set_yticks(major_ticks)
