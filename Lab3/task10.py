@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 n = 8
-X, Y = np.mgrid[-n:n, -n:n]
+X, Y = np.mgrid[-n:n+1, -n:n+1]
 cmap = plt.get_cmap("jet")
 colors = cmap(np.linspace(0, 0.8, 8))
 M = np.hypot(X, Y)
