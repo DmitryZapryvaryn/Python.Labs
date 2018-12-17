@@ -1,0 +1,1 @@
+http://gael-varoquaux.info/scipy-lecture-notes/packages/scikit-learn/index.html

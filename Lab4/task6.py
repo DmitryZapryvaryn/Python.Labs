@@ -11,7 +11,8 @@ names = [
     'WAGE: Wage (dollar per hour)',
     'AGE: years',
     'RACE: 1=Other, 2=Hispanic, 3=White',
-    'OCCUPATION: 1=Management, 2=Sales, 3=Clerical, 4=Service, 5=Professional, 6=Other',
+    '''OCCUPATION: 1=Management, 2=Sales, 3=Clerical, 4=Service, 5=Professional,
+     6=Other''',
     'SECTOR: 0=Other, 1=Manufacturing, 2=Construction',
     'MARR: 0=Unmarried, 1=Married',
 ]
@@ -20,8 +21,10 @@ short_names = [n.split(':')[0] for n in names]
 data = pandas.read_csv('Lab4/data2.txt', sep='	')
 data.columns = short_names
 
-seaborn.pairplot(data, vars=['WAGE', 'AGE', 'EDUCATION'], kind='reg')
-seaborn.pairplot(data, vars=['WAGE', 'AGE', 'EDUCATION'], kind='reg', hue='SEX')
+seaborn.pairplot(
+    data, vars=['WAGE', 'AGE', 'EDUCATION'], kind='reg')
+seaborn.pairplot(
+    data, vars=['WAGE', 'AGE', 'EDUCATION'], kind='reg', hue='SEX')
 seaborn.lmplot(y='WAGE', x='EDUCATION', data=data)
 
 plt.show()
