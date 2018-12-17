@@ -7,6 +7,7 @@ iris = datasets.load_iris()
 X, y = iris.data[:, :2], iris.target
 knn = neighbors.KNeighborsClassifier(n_neighbors=1)
 knn.fit(X, y)
+
 '''
 print(
     'Predicted iris name([3, 5, 4, 2]): ', iris.target_names[knn.predict(
