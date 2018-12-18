@@ -11,8 +11,8 @@ print(data[data['Gender'] == 'Female']['VIQ'].mean())
 groupby_gender = data.groupby('Gender')
 for gender, value in groupby_gender['VIQ']:
     print((gender, value.mean()))
-    
-print('\nGender count:\n',groupby_gender.size())
+
+print('\nGender count:\n', groupby_gender.size())
 
 print('\nGender means:\n', groupby_gender.mean())
 

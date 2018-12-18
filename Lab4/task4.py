@@ -20,6 +20,11 @@ print(
     "stats.ttest_1samp(data['FSIQ'] - data['PIQ'], 0):\n", stats.ttest_1samp(
         data['FSIQ'] - data['PIQ'], 0))
 
+print()
 print(
-    'stats.kruskal(female_viq, male_viq):\n', stats.kruskal(
+    'stats.wilcoxon(female_viq, male_viq):\n', stats.wilcoxon(
+        female_viq, male_viq))
+
+print(
+    'stats.mannwhitneyu(female_viq, male_viq):\n', stats.mannwhitneyu(
         female_viq, male_viq))

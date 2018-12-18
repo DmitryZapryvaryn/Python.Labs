@@ -1,6 +1,7 @@
 import pandas
 import numpy as np
 from statsmodels.formula.api import ols
+from scipy import stats
 
 x = np.linspace(-5, 5, 20)
 np.random.seed(1)
@@ -22,3 +23,6 @@ data_long = pandas.concat((data_fsiq, data_piq))
 print(data_long)
 model = ols("iq ~ type", data_long).fit()
 print(model.summary())
+
+print('t-test(independent):\n', stats.ttest_ind(data['FSIQ'], data['PIQ']))
+print('t-test(related):\n', stats.ttest_rel(data['FSIQ'], data['PIQ']))
